@@ -1,5 +1,5 @@
 //
-//  CloudPhotosApp.swift
+//  App.swift
 //  CloudPhotos
 //
 //  Created by シン・ジャスティン on 2023/10/11.
@@ -11,11 +11,8 @@ import SwiftData
 @main
 struct CloudPhotosApp: App {
     var sharedModelContainer: ModelContainer = {
-        let schema = Schema([
-            Item.self,
-        ])
+        let schema = Schema([Photo.self])
         let modelConfiguration = ModelConfiguration(schema: schema, isStoredInMemoryOnly: false)
-
         do {
             return try ModelContainer(for: schema, configurations: [modelConfiguration])
         } catch {
@@ -25,7 +22,7 @@ struct CloudPhotosApp: App {
 
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            PhotoGridView()
         }
         .modelContainer(sharedModelContainer)
     }

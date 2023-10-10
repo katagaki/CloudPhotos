@@ -7,22 +7,28 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		E43DFB042AD5DA3F002A6317 /* CloudPhotosApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E43DFB032AD5DA3F002A6317 /* CloudPhotosApp.swift */; };
-		E43DFB062AD5DA3F002A6317 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E43DFB052AD5DA3F002A6317 /* ContentView.swift */; };
-		E43DFB082AD5DA3F002A6317 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = E43DFB072AD5DA3F002A6317 /* Item.swift */; };
+		E43DFB042AD5DA3F002A6317 /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = E43DFB032AD5DA3F002A6317 /* App.swift */; };
+		E43DFB062AD5DA3F002A6317 /* PhotoGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E43DFB052AD5DA3F002A6317 /* PhotoGridView.swift */; };
+		E43DFB082AD5DA3F002A6317 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = E43DFB072AD5DA3F002A6317 /* Photo.swift */; };
 		E43DFB0A2AD5DA40002A6317 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E43DFB092AD5DA40002A6317 /* Assets.xcassets */; };
-		E43DFB0D2AD5DA40002A6317 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E43DFB0C2AD5DA40002A6317 /* Preview Assets.xcassets */; };
+		E43DFB162AD5DC5E002A6317 /* CloudImageState.swift in Sources */ = {isa = PBXBuildFile; fileRef = E43DFB152AD5DC5E002A6317 /* CloudImageState.swift */; };
+		E43DFB182AD5DC79002A6317 /* PhotoLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E43DFB172AD5DC79002A6317 /* PhotoLabel.swift */; };
+		E43DFB1B2AD5DDCC002A6317 /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E43DFB1A2AD5DDCC002A6317 /* UIImage.swift */; };
+		E43DFB202AD5DE24002A6317 /* PhotoViewer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E43DFB1F2AD5DE24002A6317 /* PhotoViewer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		E43DFB002AD5DA3F002A6317 /* CloudPhotos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CloudPhotos.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		E43DFB032AD5DA3F002A6317 /* CloudPhotosApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudPhotosApp.swift; sourceTree = "<group>"; };
-		E43DFB052AD5DA3F002A6317 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		E43DFB072AD5DA3F002A6317 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		E43DFB032AD5DA3F002A6317 /* App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
+		E43DFB052AD5DA3F002A6317 /* PhotoGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoGridView.swift; sourceTree = "<group>"; };
+		E43DFB072AD5DA3F002A6317 /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
 		E43DFB092AD5DA40002A6317 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		E43DFB0C2AD5DA40002A6317 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		E43DFB0E2AD5DA40002A6317 /* CloudPhotos.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CloudPhotos.entitlements; sourceTree = "<group>"; };
 		E43DFB0F2AD5DA40002A6317 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E43DFB152AD5DC5E002A6317 /* CloudImageState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudImageState.swift; sourceTree = "<group>"; };
+		E43DFB172AD5DC79002A6317 /* PhotoLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoLabel.swift; sourceTree = "<group>"; };
+		E43DFB1A2AD5DDCC002A6317 /* UIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
+		E43DFB1F2AD5DE24002A6317 /* PhotoViewer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoViewer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,23 +61,50 @@
 		E43DFB022AD5DA3F002A6317 /* CloudPhotos */ = {
 			isa = PBXGroup;
 			children = (
-				E43DFB032AD5DA3F002A6317 /* CloudPhotosApp.swift */,
-				E43DFB052AD5DA3F002A6317 /* ContentView.swift */,
-				E43DFB072AD5DA3F002A6317 /* Item.swift */,
-				E43DFB092AD5DA40002A6317 /* Assets.xcassets */,
 				E43DFB0E2AD5DA40002A6317 /* CloudPhotos.entitlements */,
 				E43DFB0F2AD5DA40002A6317 /* Info.plist */,
-				E43DFB0B2AD5DA40002A6317 /* Preview Content */,
+				E43DFB092AD5DA40002A6317 /* Assets.xcassets */,
+				E43DFB1C2AD5DDDC002A6317 /* Data Models */,
+				E43DFB1D2AD5DDE1002A6317 /* Views */,
+				E43DFB1E2AD5DDFE002A6317 /* Enums */,
+				E43DFB192AD5DDC4002A6317 /* Extensions */,
 			);
 			path = CloudPhotos;
 			sourceTree = "<group>";
 		};
-		E43DFB0B2AD5DA40002A6317 /* Preview Content */ = {
+		E43DFB192AD5DDC4002A6317 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				E43DFB0C2AD5DA40002A6317 /* Preview Assets.xcassets */,
+				E43DFB1A2AD5DDCC002A6317 /* UIImage.swift */,
 			);
-			path = "Preview Content";
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		E43DFB1C2AD5DDDC002A6317 /* Data Models */ = {
+			isa = PBXGroup;
+			children = (
+				E43DFB072AD5DA3F002A6317 /* Photo.swift */,
+			);
+			path = "Data Models";
+			sourceTree = "<group>";
+		};
+		E43DFB1D2AD5DDE1002A6317 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E43DFB032AD5DA3F002A6317 /* App.swift */,
+				E43DFB052AD5DA3F002A6317 /* PhotoGridView.swift */,
+				E43DFB172AD5DC79002A6317 /* PhotoLabel.swift */,
+				E43DFB1F2AD5DE24002A6317 /* PhotoViewer.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		E43DFB1E2AD5DDFE002A6317 /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				E43DFB152AD5DC5E002A6317 /* CloudImageState.swift */,
+			);
+			path = Enums;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -132,7 +165,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E43DFB0D2AD5DA40002A6317 /* Preview Assets.xcassets in Resources */,
 				E43DFB0A2AD5DA40002A6317 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -144,9 +176,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E43DFB062AD5DA3F002A6317 /* ContentView.swift in Sources */,
-				E43DFB082AD5DA3F002A6317 /* Item.swift in Sources */,
-				E43DFB042AD5DA3F002A6317 /* CloudPhotosApp.swift in Sources */,
+				E43DFB062AD5DA3F002A6317 /* PhotoGridView.swift in Sources */,
+				E43DFB182AD5DC79002A6317 /* PhotoLabel.swift in Sources */,
+				E43DFB082AD5DA3F002A6317 /* Photo.swift in Sources */,
+				E43DFB202AD5DE24002A6317 /* PhotoViewer.swift in Sources */,
+				E43DFB1B2AD5DDCC002A6317 /* UIImage.swift in Sources */,
+				E43DFB042AD5DA3F002A6317 /* App.swift in Sources */,
+				E43DFB162AD5DC5E002A6317 /* CloudImageState.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -280,7 +316,7 @@
 				CODE_SIGN_ENTITLEMENTS = CloudPhotos/CloudPhotos.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"CloudPhotos/Preview Content\"";
+				DEVELOPMENT_TEAM = YYM4Z6MU8F;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = CloudPhotos/Info.plist;
@@ -296,9 +332,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.yorigami.CloudPhotos;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -310,7 +349,7 @@
 				CODE_SIGN_ENTITLEMENTS = CloudPhotos/CloudPhotos.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"CloudPhotos/Preview Content\"";
+				DEVELOPMENT_TEAM = YYM4Z6MU8F;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = CloudPhotos/Info.plist;
@@ -326,9 +365,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.yorigami.CloudPhotos;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
