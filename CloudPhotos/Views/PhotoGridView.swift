@@ -15,12 +15,11 @@ struct PhotoGridView: View {
     @State var photos: [Photo] = []
     @State var displayedPhoto: Photo?
     @State var selectedPhotoItems: [PhotosPickerItem] = []
-    let columnConfiguration = [GridItem(.adaptive(minimum: 80.0), spacing: 2.0)]
     
     var body: some View {
         NavigationStack {
             ScrollView(.vertical) {
-                LazyVGrid(columns: columnConfiguration, spacing: 2.0) {
+                LazyVGrid(columns: [GridItem(.adaptive(minimum: 80.0), spacing: 2.0)], spacing: 2.0) {
                     ForEach(photos, id: \.id) { photo in
                         if displayedPhoto != photo {
                             Button {
