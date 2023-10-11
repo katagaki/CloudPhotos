@@ -37,12 +37,3 @@ final class Photo {
         return nil
     }
 }
-
-struct PhotoTransferable: Codable, Transferable {
-    var id: String
-    
-    static var transferRepresentation: some TransferRepresentation {
-        CodableRepresentation(for: PhotoTransferable.self, contentType: .image)
-        ProxyRepresentation(exporting: \.id)
-    }
-}

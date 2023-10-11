@@ -52,13 +52,5 @@ struct PhotoLabel: View {
         .onDisappear {
             state = .hidden
         }
-        .draggable(PhotoTransferable(id: photo.id)) {
-            if let thumbnailImage {
-                Image(uiImage: thumbnailImage)
-                    .resizable()
-                    .frame(width: 100.0, height: 100.0)
-                    .clipShape(RoundedRectangle(cornerRadius: 8.0))
-            }
-        }
     }
 }
