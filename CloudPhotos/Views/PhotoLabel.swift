@@ -19,7 +19,7 @@ struct PhotoLabel: View {
                 if let thumbnailImage {
                     Image(uiImage: thumbnailImage)
                         .resizable()
-                        .transition(.opacity.animation(.snappy.speed(2)))
+                        .transition(.opacity.animation(.snappy))
                 } else {
                     Rectangle()
                         .foregroundStyle(.primary.opacity(0.1))

@@ -23,7 +23,7 @@ struct PhotoGridView: View {
                     ForEach(photos, id: \.id) { photo in
                         if displayedPhoto != photo {
                             Button {
-                                withAnimation(.snappy.speed(2)) {
+                                withAnimation(.snappy) {
                                     displayedPhoto = photo
                                 }
                             } label: {
@@ -68,7 +68,7 @@ struct PhotoGridView: View {
         .overlay {
             if let displayedPhoto {
                 PhotoViewer(namespace: namespace, photo: displayedPhoto) {
-                    withAnimation(.snappy.speed(2)) {
+                    withAnimation(.snappy) {
                         self.displayedPhoto = nil
                     }
                 }
@@ -77,7 +77,7 @@ struct PhotoGridView: View {
     }
     
     func reloadPhotos() {
-        withAnimation(.snappy.speed(2)) {
+        withAnimation(.snappy) {
             do {
                 photos = try modelContext.fetch(FetchDescriptor<Photo>(sortBy: [SortDescriptor<Photo>(\.id)]))
             } catch {

@@ -24,7 +24,7 @@ struct PhotoViewer: View {
                         Image(uiImage: displayedImage)
                             .resizable()
                             .scaledToFit()
-                            .transition(.opacity.animation(.snappy.speed(2)))
+                            .transition(.opacity.animation(.snappy))
                     } else {
                         Rectangle()
                             .foregroundStyle(.clear)
@@ -48,6 +48,7 @@ struct PhotoViewer: View {
             Button("Close") {
                 closeAction()
             }
+            .padding()
             .opacity(opacityDuringGesture())
         }
         .frame(maxWidth: .infinity)
@@ -87,7 +88,7 @@ struct PhotoViewer: View {
                     if hypotenuse(gesture.translation) > 100.0 {
                         closeAction()
                     } else {
-                        withAnimation(.snappy.speed(2)) {
+                        withAnimation(.snappy) {
                             displayOffset = .zero
                         }
                     }
