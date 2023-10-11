@@ -10,7 +10,6 @@ import Foundation
 enum CloudImageState {
     case notReadyForDisplay
     case downloading
-    case downloaded
     case readyForDisplay
     case hidden
 }
