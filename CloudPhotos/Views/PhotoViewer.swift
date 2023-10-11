@@ -87,7 +87,7 @@ struct PhotoViewer: View {
                     if hypotenuse(gesture.translation) > 100.0 {
                         closeAction()
                     } else {
-                        withAnimation(.snappy) {
+                        withAnimation {
                             displayOffset = .zero
                         }
                     }
