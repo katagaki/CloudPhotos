@@ -24,7 +24,6 @@ struct PhotoViewer: View {
                         Image(uiImage: displayedImage)
                             .resizable()
                             .scaledToFit()
-                            .transition(.opacity.animation(.snappy))
                     } else {
                         Rectangle()
                             .foregroundStyle(.clear)
