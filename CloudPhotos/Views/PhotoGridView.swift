@@ -22,6 +22,15 @@ struct PhotoGridView: View {
                 LazyVGrid(columns: [GridItem(.adaptive(minimum: 80.0), spacing: 2.0)], spacing: 2.0) {
                     ForEach(photos, id: \.id) { photo in
                         if displayedPhoto != photo {
+                            if #available(iOS 18.0, *) {
+                                NavigationLink {
+                                        PhotoViewer(namespace: namespace, photo: photo, closeAction: {})
+                                            .navigationTransition(.zoom(sourceID: photo.id, in: namespace))
+                                } label: {
+                                    PhotoLabel(namespace: namespace, photo: photo)
+                                }
+                                .matchedTransitionSource(id: photo.id, in: namespace)
+                        } else {
                             Button {
                                 withAnimation {
                                     displayedPhoto = photo
@@ -37,6 +46,7 @@ struct PhotoGridView: View {
                                     reloadPhotos()
                                 }
                             }
+                        }
                         } else {
                             Rectangle()
                                 .foregroundStyle(.clear)
