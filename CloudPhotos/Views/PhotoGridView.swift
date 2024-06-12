@@ -24,7 +24,7 @@ struct PhotoGridView: View {
                         if displayedPhoto != photo {
                             if #available(iOS 18.0, *) {
                                 NavigationLink {
-                                        PhotoViewer(namespace: namespace, photo: photo, closeAction: {})
+                                        PhotoViewer(namespace: namespace, photo: photo)
                                             .navigationTransition(.zoom(sourceID: photo.id, in: namespace))
                                 } label: {
                                     PhotoLabel(namespace: namespace, photo: photo)

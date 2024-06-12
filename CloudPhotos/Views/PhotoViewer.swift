@@ -13,7 +13,7 @@ struct PhotoViewer: View {
     @State var displayOffset: CGSize = .zero
     @State var isFileFromCloudReadyForDisplay: Bool = false
     @State var displayedImage: UIImage?
-    var closeAction: () -> Void
+    var closeAction: (() -> Void)?
     
     var body: some View {
         VStack(alignment: .center, spacing: 16.0) {
@@ -44,11 +44,13 @@ struct PhotoViewer: View {
             .matchedGeometryEffect(id: photo.id, in: namespace)
             .offset(displayOffset)
             Spacer(minLength: 0)
-            Button("Close") {
-                closeAction()
+            if let closeAction {
+                Button("Close") {
+                    closeAction()
+                }
+                .padding()
+                .opacity(opacityDuringGesture())
             }
-            .padding()
-            .opacity(opacityDuringGesture())
         }
         .frame(maxWidth: .infinity)
         .background(.regularMaterial.opacity(opacityDuringGesture()))
@@ -81,14 +83,18 @@ struct PhotoViewer: View {
         .gesture(
             DragGesture()
                 .onChanged { gesture in
-                    displayOffset = gesture.translation
+                    if closeAction != nil {
+                        displayOffset = gesture.translation
+                    }
                 }
                 .onEnded { gesture in
-                    if hypotenuse(gesture.translation) > 100.0 {
-                        closeAction()
-                    } else {
-                        withAnimation {
-                            displayOffset = .zero
+                    if let closeAction {
+                        if hypotenuse(gesture.translation) > 100.0 {
+                            closeAction()
+                        } else {
+                            withAnimation {
+                                displayOffset = .zero
+                            }
                         }
                     }
                 }
